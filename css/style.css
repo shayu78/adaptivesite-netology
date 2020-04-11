@@ -35,6 +35,7 @@ body {
   color: #000000;
   font-weight: 400;
   min-width: 320px;
+  counter-reset: athlets-article-count players-article-count others-article-count;
 }
 
 .bold_text {
@@ -212,6 +213,12 @@ body {
   font-size: 14px;
   font-weight: 700;
   margin-right: 5px;
+  text-align: center;
+}
+
+.athlet-article-number::before {
+  counter-increment: athlets-article-count;
+  content: "0" counter(athlets-article-count);
 }
 
 .athlet-article-number::after {
@@ -304,6 +311,12 @@ body {
   font-size: 14px;
   font-weight: 700;
   margin-right: 5px;
+  text-align: center;
+}
+
+.player-article-number::before {
+  counter-increment: players-article-count;
+  content: "0" counter(players-article-count);
 }
 
 .player-article-number::after {
@@ -381,6 +394,13 @@ body {
   align-self: center;
   font-size: 14px;
   color: #ffffff;
+  text-align: center;
+  font-weight: 700;
+}
+
+.other-article-number::before {
+  counter-increment: others-article-count;
+  content: "0" counter(others-article-count);
 }
 
 .other-article-number::after {
@@ -476,7 +496,7 @@ body {
   width: 60px;
   height: 50px;
   margin: auto;
-  fill: #ffffff;
+  filter: brightness(0) invert(1);
 }
 
 .footer-content {
@@ -656,6 +676,18 @@ body {
   }
 }
 
+@media (min-width: 961px) and (max-width: 1365px) {
+  .header-content-text:nth-child(even) {
+    max-width: 650px;
+  }
+}
+
+@media (min-width: 1366px) {
+  .header-content-text:nth-child(even) {
+    max-width: 1050px;
+  }
+}
+
 @media (min-width: 1281px) and (max-width: 1920px) {
   .header {
     background-image: url("../images/img/football_1920.jpg");
@@ -702,7 +734,7 @@ body {
   }
 
   .header-content-text:nth-child(even) {
-    max-width: 70%;
+    max-width: 460px;
   }
 
   .header-buttons-wrapper {
@@ -952,10 +984,6 @@ body {
     margin-bottom: 0;
     font-size: 90px;
     /*padding-bottom: 20px;*/
-  }
-
-  .header-content-text:nth-child(even) {
-    max-width: 65%;
   }
 
   .header-buttons-wrapper {
