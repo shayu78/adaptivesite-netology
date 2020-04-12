@@ -486,7 +486,7 @@ body {
 .footer-logo-image-link {
   display: flex;
   margin: 0 auto;
-  background-color: #684ac0;
+  background: linear-gradient(to bottom, #7751da, #50329d);
   border-radius: 12px;
   width: 72px;
   height: 74px;
