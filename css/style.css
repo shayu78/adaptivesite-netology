@@ -497,6 +497,8 @@ body {
   height: 50px;
   margin: auto;
   filter: brightness(0) invert(1);
+  pointer-events: none;
+  position: relative;
 }
 
 .footer-content {
